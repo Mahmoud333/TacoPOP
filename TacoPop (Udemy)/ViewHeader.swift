@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewHeader: UIView, DropShadow { //conform to our protocol extension
+class ViewHeader: UIView, DropShadow, Shakeable { //conform to our protocol extension
 
     
     

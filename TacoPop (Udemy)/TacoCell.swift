@@ -8,8 +8,8 @@
 
 import UIKit
 
-//will load nib from file
-class TacoCell: UICollectionViewCell {
+//will load nib from file, conform to nibloadableView
+class TacoCell: UICollectionViewCell, NibLoadableView, Shakeable {
 
     @IBOutlet weak var tacoImage: UIImageView!
     @IBOutlet weak var tacoLabel: UILabel!
