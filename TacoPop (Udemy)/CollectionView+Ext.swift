@@ -25,18 +25,18 @@ extension UICollectionView {
         //ReusableView
     }
     
-    
     //UICollectionViewCell where T conform to ReusableView, then return that type "the cell"
     func dequeueReusableCell<T: UICollectionViewCell where T: ReusableView>(forIndexPath indexPath: NSIndexPath) -> T {
         
         guard let cell = dequeueReusableCell(withReuseIdentifier: T.reuseidentifier, for: indexPath as IndexPath) as? T else {
             fatalError("could not dequeue cell with identifier: \(T.reuseidentifier)")
         }
-        //guard that cell
+        //guard cell
         
         return cell
     }
 }
 
 extension UICollectionViewCell: ReusableView {}
+
 //having UICollectionViewCell conform to ReusableView
